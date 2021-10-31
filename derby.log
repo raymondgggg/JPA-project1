@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Oct 31 20:46:47 UTC 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-017c-d81a-c6b7-000007552800 
+on database directory /Users/nabihabashir/Documents/git_cecs323/My JPA-Project1/My JPA-Project1/JPA-Project1 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5c29bfd 
+Loaded from file:/Users/nabihabashir/Library/Application%20Support/JetBrains/IntelliJIdea2021.2/jdbc-drivers/Apache%20Derby/10.15.2.0/derby-10.15.2.0.jar
+java.vendor=JetBrains s.r.o.
+java.runtime.version=11.0.12+7-b1504.28
+user.dir=/Users/nabihabashir/Documents/git_cecs323/My JPA-Project1/My JPA-Project1
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.14.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
