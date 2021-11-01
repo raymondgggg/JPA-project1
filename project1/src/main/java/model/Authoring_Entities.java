@@ -1,0 +1,49 @@
+package model;
+
+import javax.persistence.*;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "authoring_entities_type", discriminatorType = DiscriminatorType.STRING)
+public class Authoring_Entities {
+
+    @Id
+    @Column(name = "email", nullable = false, length = 30)
+    private String email;
+
+    @Column(nullable = false, length = 80)
+    private String name;
+
+
+
+    public Authoring_Entities() {
+    }
+
+    public Authoring_Entities(String email, String name) {
+        this.email = email;
+        this.name = name;
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString(){
+        return "{email: " + this.email + ", name: " + this.name + "}";
+    }
+}

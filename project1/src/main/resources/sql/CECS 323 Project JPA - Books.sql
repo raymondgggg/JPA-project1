@@ -45,3 +45,4 @@ create table BOOKS
     unique (TITLE, PUBLISHER_NAME),
     unique (TITLE, AUTHORING_ENTITY_NAME)
 );
+
