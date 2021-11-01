@@ -9,7 +9,11 @@
         <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
+<<<<<<< Updated upstream
     <root id="archive" name="JPA-Project1-1.0-SNAPSHOT.war">
+=======
+    <root id="archive" name="${project.artifactId}-${project.version}.war">
+>>>>>>> Stashed changes
       <element id="artifact" artifact-name="JPA-Project1:war exploded" />
     </root>
   </artifact>

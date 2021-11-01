@@ -1,6 +1,10 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="JPA-Project1:war exploded">
+<<<<<<< Updated upstream
     <output-path>$PROJECT_DIR$/project1/target/JPA-Project1-1.0-SNAPSHOT</output-path>
+=======
+    <output-path>$PROJECT_DIR$/project1/target/${project.artifactId}-${project.version}</output-path>
+>>>>>>> Stashed changes
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -14,6 +18,7 @@
         <element id="directory" name="classes">
           <element id="module-output" name="JPA-Project1" />
         </element>
+<<<<<<< Updated upstream
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.eclipse.persistence:eclipselink:2.7.9" />
           <element id="library" level="project" name="Maven: org.eclipse.persistence:jakarta.persistence:2.2.3" />
@@ -39,6 +44,11 @@
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/project1/target/JPA-Project1-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+=======
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/project1/target/${project.artifactId}-${project.version}/META-INF/MANIFEST.MF" />
+>>>>>>> Stashed changes
       </element>
       <element id="javaee-facet-resources" facet="JPA-Project1/web/Web" />
     </root>
