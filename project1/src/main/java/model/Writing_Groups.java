@@ -25,6 +25,38 @@ public class Writing_Groups extends Authoring_Entities{
 
     }
 
+    /**
+     * Constructor
+     * @param email of the group
+     * @param name of group
+     */
+    public Writing_Groups(String email, String name) {
+        super(email, name);
+    }
 
 
+    public String getHead_writer(){
+        return this.head_writer;
+    }
+
+    public void setHead_writer(String head_writer){
+        this.head_writer = head_writer;
+    }
+
+    public int getYear_formed(){
+        return this.year_formed;
+    }
+
+    public void setYear_formed(int year_formed){
+        this.year_formed = year_formed;
+    }
+
+    /**
+     * returns string representation of object
+     * @return String object
+     */
+    @Override
+    public String toString() {
+        return "{head_writer: " + this.head_writer + ", year_formed: " + this.year_formed + "}";
+    }
 }
