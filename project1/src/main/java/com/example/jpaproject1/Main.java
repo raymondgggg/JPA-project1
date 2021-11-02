@@ -29,7 +29,7 @@ public class Main {
         System.out.println( "1. Books" );
         System.out.println( "2. Publishers" );
         System.out.println( "3. Authoring Entity" );
-        System.out.println( "4. List all of the Primary Keys" );
+        System.out.println( "4. List all of the Primary Keys");
         System.out.println( "5. Quit\n" );
 
         // scanner to take user input for main men
@@ -59,8 +59,6 @@ public class Main {
                 System.out.println("Quitting Program");
             }
         }while(repeatMenu);
-
-
     }
 
     /**
@@ -140,6 +138,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Option: ");
         int userChoice = scanner.nextInt();
+
 
         if (userChoice == 1){
             //TODO: displayPublishers()
