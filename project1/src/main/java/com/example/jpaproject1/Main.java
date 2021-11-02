@@ -129,6 +129,12 @@ public class Main {
         while(repeatMenu);
     }
 
+    public void displayBooks(){
+
+    }
+
+
+
     /**
      * Method that displays the interactions that the user
      * can have with the publishers entity
