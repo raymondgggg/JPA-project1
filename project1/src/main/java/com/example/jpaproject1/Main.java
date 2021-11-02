@@ -169,25 +169,33 @@ public class Main {
         System.out.println( "4. Return to Main Menu\n" );
         System.out.println( "5. Exit\n" );
 
-        // scanner to take user input for main menu
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Option: ");
-        int userChoice = scanner.nextInt();
+        int userChoice = getIntRange(1, 5);
 
+        boolean repeatMenu = true;
+
+        do{
         if (userChoice == 1){
             //TODO: displayAuthoringEntities()
+            repeatMenu = false;
         }
         if (userChoice == 2){
             //TODO: addAuthoringEntities()
+            repeatMenu = false;
         }
         if (userChoice == 3){
             //TODO: listInfoWritingGroups()
+            repeatMenu = false;
         }
         if (userChoice == 4){
             displayMainMenu();
+            repeatMenu = false;
         }
         if (userChoice == 5){
+            repeatMenu = false;
         }
+        }
+        while(repeatMenu);
     }
 
 
