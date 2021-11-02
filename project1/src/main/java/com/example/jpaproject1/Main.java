@@ -1,8 +1,12 @@
 package com.example.jpaproject1;
 
+<<<<<<< Updated upstream
 import model.Authoring_Entities;
 import model.Books;
 import model.Publishers;
+=======
+import model.*;
+>>>>>>> Stashed changes
 
 import javax.persistence.EntityManager;
 import java.util.*;
@@ -31,6 +35,7 @@ public class Main {
      * application.
      */
     public static void displayMainMenu(){
+        Books b = new Books();
         System.out.println( "\n-----Main Menu-----\nPlease select an option.\n" );
         System.out.println( "1. Books" );
         System.out.println( "2. Publishers" );
@@ -167,6 +172,12 @@ public class Main {
             }
 
         }while(repeatMenu);
+    }
+
+    /**
+     * Method to add a book object to the relational database
+     */
+    public static void addBook(){
 
     }
 
