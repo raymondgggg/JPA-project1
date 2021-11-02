@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-
+// rayRay
 public class Main {
     /** Entity manager that will be used to interact with the database */
     private EntityManager em;
@@ -196,7 +196,7 @@ public class Main {
         return input;
     } //End of the getIntRange method
 
-    
+
     public static void main(String[] args) {
         System.out.println("Hello world");
         displayMainMenu();
