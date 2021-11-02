@@ -22,7 +22,7 @@ public class Main {
 
     /**
      * Method that displays the main interactions the user can have with the
-     * application
+     * application.
      */
     public static void displayMainMenu(){
         System.out.println( "\n-----Main Menu-----\nPlease select an option.\n" );
@@ -32,30 +32,35 @@ public class Main {
         System.out.println( "4. List all of the Primary Keys" );
         System.out.println( "5. Quit\n" );
 
-        // scanner to take user input for main menu
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Option: ");
+        // scanner to take user input for main men
+        System.out.print("Option: ");
 
-        int userChoice = scanner.nextInt();
-        boolean choice;
+        int userChoice = getIntRange(1, 5);
+        boolean repeatMenu = true;
 
-        //TODO: add a loop?
+        do{
+            if (userChoice == 1){
+                repeatMenu = false;
+                booksMenu();
+            }
+            else if (userChoice == 2){
+                repeatMenu = false;
+                publishersMenu();
+            }
+            else if (userChoice == 3){
+                repeatMenu = false;
+                authoringEntitiesMenu();
+            }
+            else if (userChoice == 4){
+                // TODO make the list primary keys method
+            }
+            else if (userChoice == 5){
+                repeatMenu = false;
+                System.out.println("Quitting Program");
+            }
+        }while(repeatMenu);
 
-        if (userChoice == 1){
-            // TODO: booksMenu()
-        }
-        if (userChoice == 2){
-            // TODO: PublishersMenu()
-        }
-        if (userChoice == 3){
-            // TODO: authoringEntityMenu()
-        }
-        if (userChoice == 4){
-            // TODO
-        }
-        if (userChoice == 5){
 
-        }
     }
 
     /**
@@ -214,7 +219,6 @@ public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println("Hello world");
         displayMainMenu();
     }
 
