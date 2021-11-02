@@ -7,6 +7,7 @@ import java.util.Objects;
  * Class representation of books
  */
 @Entity
+<<<<<<< Updated upstream
 @Table(uniqueConstraints = {@UniqueConstraint(columnNames =
         {"title", "publisher_name"}),
         @UniqueConstraint(columnNames =
@@ -16,6 +17,14 @@ import java.util.Objects;
         query = "SELECT title, isbn " +
                 "FROM   BOOKS"
 )
+=======
+@NamedNativeQuery(
+        name= "displayAllBooks",
+        query = "SELECT * FROM BOOKS",
+        resultClass = Books.class
+)
+
+>>>>>>> Stashed changes
 public class Books {
     /** id of book */
     @Id
