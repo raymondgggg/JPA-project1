@@ -1,10 +1,28 @@
 package com.example.jpaproject1;
 
+import javax.persistence.EntityManager;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 
 public class Main {
+    /** Entity manager that will be used to interact with the database */
+    private EntityManager em;
+    /** Logger that will be used throughout the program*/
+    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
 
+    /**
+     * Constructor
+     * @param em entity manager object
+     */
+    public Main(EntityManager em){
+        this.em = em;
+    }
+
+    /**
+     * Method that displays the main interactions the user can have with the
+     * application
+     */
     public static void displayMainMenu(){
         System.out.println( "\n-----Main Menu-----\nPlease select an option.\n" );
         System.out.println( "1. Books" );
@@ -39,6 +57,10 @@ public class Main {
         }
     }
 
+    /**
+     * Method that displays the interactions that user
+     * can have with the Book entity
+     */
     public static void booksMenu(){
         System.out.println( "\n-----Books Menu-----\nPlease select an option.\n" );
         System.out.println( "1. Display all Books" );
@@ -81,7 +103,10 @@ public class Main {
         }
     }
 
-
+    /**
+     * Method that displays the interactions that the user
+     * can have with the publishers entity
+     */
     public static void publishersMenu(){
         System.out.println( "\n-----Publishers Menu-----\nPlease select an option.\n" );
         System.out.println( "1. Display all Publishers" );
@@ -111,6 +136,10 @@ public class Main {
         }
     }
 
+    /**
+     * Method that displays the interactions that the user
+     * can have with the authoring entity
+     */
     public static void authoringEntitiesMenu(){
         System.out.println( "\n-----Authoring Entities Menu-----\nPlease select an option.\n" );
         System.out.println( "1. Display all Authoring Entities" );
@@ -167,6 +196,7 @@ public class Main {
         return input;
     } //End of the getIntRange method
 
+    
     public static void main(String[] args) {
         System.out.println("Hello world");
         displayMainMenu();
