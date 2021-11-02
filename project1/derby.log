@@ -1,13 +1,13 @@
 ----------------------------------------------------------------
-Tue Nov 02 06:33:16 UTC 2021:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-017c-df5a-0473-000007550878 
-on database directory memory:/Users/nabihabashir/Desktop/JPA-project1/project1 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5c29bfd 
-Loaded from file:/Users/nabihabashir/Library/Application%20Support/JetBrains/IntelliJIdea2021.2/jdbc-drivers/Apache%20Derby/10.15.2.0/derby-10.15.2.0.jar
+Tue Nov 02 07:07:13 UTC 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-017c-df79-2df5-00000757ba98 
+on database directory memory:/home/raymond/Desktop/JPA-project1/project1 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5c29bfd 
+Loaded from file:/home/raymond/.config/JetBrains/IntelliJIdea2021.2/jdbc-drivers/Apache%20Derby/10.15.2.0/derby-10.15.2.0.jar
 java.vendor=JetBrains s.r.o.
 java.runtime.version=11.0.12+7-b1504.28
-user.dir=/Users/nabihabashir/Desktop/JPA-project1/project1
-os.name=Mac OS X
-os.arch=x86_64
-os.version=10.14.6
+user.dir=/home/raymond/Desktop/JPA-project1/project1
+os.name=Linux
+os.arch=amd64
+os.version=5.13.0-7614-generic
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''

@@ -81,43 +81,42 @@ public class Main {
         boolean repeatMenu = true;
 
         do{
-        if (userChoice == 1){
-            //TODO: displayBooks()
-            booksMenu();
-            repeatMenu = false;
-        }
-        if (userChoice == 2){
-            //TODO: addBook()
-            booksMenu();
-            repeatMenu = false;
+            if (userChoice == 1){
+                //TODO: displayBooks()
+                booksMenu();
+                repeatMenu = false;
+            }
+            if (userChoice == 2){
+                //TODO: addBook()
+                booksMenu();
+                repeatMenu = false;
 
-        }
-        if (userChoice == 3){
-            //TODO: listInfoBooks()
-            booksMenu();
-            repeatMenu = false;
+            }
+            if (userChoice == 3){
+                //TODO: listInfoBooks()
+                booksMenu();
+                repeatMenu = false;
 
-        }
-        if (userChoice == 4){
-            //TODO: deleteBook()
-            booksMenu();
-            repeatMenu = false;
+            }
+            if (userChoice == 4){
+                //TODO: deleteBook()
+                booksMenu();
+                repeatMenu = false;
+            }
+            if (userChoice == 5){
+                //TODO: updateBook()
+                booksMenu();
+                repeatMenu = false;
 
-        }
-        if (userChoice == 5){
-            //TODO: updateBook()
-            booksMenu();
-            repeatMenu = false;
+            }
+            if (userChoice == 6){
+                displayMainMenu();
+                repeatMenu = false;
 
-        }
-        if (userChoice == 6){
-            displayMainMenu();
-            repeatMenu = false;
-
-        }
-        if (userChoice == 7){
-            repeatMenu = false;
-        }
+            }
+            if (userChoice == 7){
+                repeatMenu = false;
+            }
         }
         while(repeatMenu);
     }
@@ -135,25 +134,37 @@ public class Main {
         System.out.println( "5. Exit\n" );
 
         // scanner to take user input for main menu
-        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Option: ");
-        int userChoice = scanner.nextInt();
+        int userChoice = getIntRange(1, 5);
+        boolean repeatMenu = true;
 
+        do{
+            if (userChoice == 1){
+                //TODO: displayPublishers()
+                repeatMenu = false;
+            }
+            else if (userChoice == 2){
+                //TODO: addPublisher()
+                repeatMenu = false;
 
-        if (userChoice == 1){
-            //TODO: displayPublishers()
-        }
-        if (userChoice == 2){
-            //TODO: addPublisher()
-        }
-        if (userChoice == 3){
-            //TODO: listInfoPublishers()
-        }
-        if (userChoice == 4){
-            displayMainMenu();
-        }
-        if (userChoice == 5){
-        }
+            }
+            else if (userChoice == 3){
+                //TODO: list information about publisher
+                repeatMenu = false;
+
+            }
+            else if (userChoice == 4){
+                //TODO: return2main()
+                repeatMenu = false;
+
+            }
+            else if (userChoice == 5){
+                repeatMenu = false;
+            }
+
+        }while(repeatMenu);
+
     }
 
     /**
