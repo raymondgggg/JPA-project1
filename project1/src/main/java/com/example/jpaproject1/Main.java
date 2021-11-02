@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 // rayRay
+// nabiha
 public class Main {
     /** Entity manager that will be used to interact with the database */
     private EntityManager em;
