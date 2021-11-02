@@ -1,12 +1,11 @@
 package com.example.jpaproject1;
 
-<<<<<<< Updated upstream
+
 import model.Authoring_Entities;
 import model.Books;
 import model.Publishers;
-=======
+
 import model.*;
->>>>>>> Stashed changes
 
 import javax.persistence.EntityManager;
 import java.util.*;
