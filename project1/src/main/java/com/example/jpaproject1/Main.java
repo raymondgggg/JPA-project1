@@ -66,42 +66,57 @@ public class Main {
         System.out.println( "\n-----Books Menu-----\nPlease select an option.\n" );
         System.out.println( "1. Display all Books" );
         System.out.println( "2. Add a Book" );
-        System.out.println( "3. List information about a Book" );
+        System.out.println( "3. Information about a BookList" );
         System.out.println( "4. Delete a Book" );
         System.out.println( "5. Update a Book" );
         System.out.println( "6. Return to Main Menu\n" );
         System.out.println( "7. Exit\n" );
 
-        // scanner to take user input for main menu
-        Scanner scanner = new Scanner(System.in);
+        //get user input
         System.out.println("Option: ");
-        int userChoice = scanner.nextInt();
+        int userChoice = getIntRange(1, 7);
+        boolean repeatMenu = true;
 
+        do{
         if (userChoice == 1){
             //TODO: displayBooks()
             booksMenu();
+            repeatMenu = false;
         }
         if (userChoice == 2){
             //TODO: addBook()
             booksMenu();
+            repeatMenu = false;
+
         }
         if (userChoice == 3){
             //TODO: listInfoBooks()
             booksMenu();
+            repeatMenu = false;
+
         }
         if (userChoice == 4){
             //TODO: deleteBook()
             booksMenu();
+            repeatMenu = false;
+
         }
         if (userChoice == 5){
             //TODO: updateBook()
             booksMenu();
+            repeatMenu = false;
+
         }
         if (userChoice == 6){
             displayMainMenu();
+            repeatMenu = false;
+
         }
         if (userChoice == 7){
+            repeatMenu = false;
         }
+        }
+        while(repeatMenu);
     }
 
     /**
