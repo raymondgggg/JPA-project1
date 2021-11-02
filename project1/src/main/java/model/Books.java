@@ -7,6 +7,15 @@ import java.util.Objects;
  * Class representation of books
  */
 @Entity
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames =
+        {"title", "publisher_name"}),
+        @UniqueConstraint(columnNames =
+                {"title", "authoring_entity_name"})})
+@NamedNativeQuery(
+        name="books",
+        query = "SELECT title, isbn " +
+                "FROM   BOOKS"
+)
 public class Books {
     /** id of book */
     @Id

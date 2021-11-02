@@ -1,11 +1,17 @@
 package com.example.jpaproject1;
 
+import model.Authoring_Entities;
+import model.Books;
+import model.Publishers;
+
 import javax.persistence.EntityManager;
+import java.util.*;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
 // rayRay
 // nabiha
+// rami
 public class Main {
     /** Entity manager that will be used to interact with the database */
     private EntityManager em;
@@ -31,13 +37,10 @@ public class Main {
         System.out.println( "3. Authoring Entity" );
         System.out.println( "4. List all of the Primary Keys");
         System.out.println( "5. Quit\n" );
-
         // scanner to take user input for main men
         System.out.print("Option: ");
-
         int userChoice = getIntRange(1, 5);
         boolean repeatMenu = true;
-
         do{
             if (userChoice == 1){
                 repeatMenu = false;
@@ -208,7 +211,24 @@ public class Main {
         while(repeatMenu);
     }
 
+    public void displayPrimaryKeys(){
+        System.out.println("Books");
+        List<Books> booksList= em.createNamedQuery("books",Books.class).getResultList();
+        for(Books book:booksList){
+            System.out.println(book);
+        }
+        System.out.println("Publishers");
+        List<Publishers> publishersList =  em.createNamedQuery("publishers",Publishers.class).getResultList();
+        for(Publishers publishers:publishersList){
+            System.out.println(publishersList);
+    }
+        System.out.println("Authoring Entities");
+        List<Authoring_Entities> authoringList= em.createNamedQuery("authoring", Authoring_Entities.class).getResultList();
+        for(Authoring_Entities auth:authoringList){
+            System.out.println(auth);
+        }
 
+    }
     /**
      * A method which takes the User's input that is in a given integer range only.
      * @param low the minimum integer value the input can be

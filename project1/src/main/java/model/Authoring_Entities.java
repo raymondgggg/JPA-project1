@@ -8,6 +8,11 @@ import javax.persistence.*;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "authoring_entities_type", discriminatorType = DiscriminatorType.STRING)
+@NamedNativeQuery(
+        name="authoring",
+        query = "SELECT email " +
+                "FROM    Authoring_Entities"
+)
 public class Authoring_Entities {
 
     /** email of entity*/
