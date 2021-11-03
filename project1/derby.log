@@ -1,8 +1,15 @@
 ----------------------------------------------------------------
+<<<<<<< Updated upstream
 Wed Nov 03 00:54:05 UTC 2021:
 Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-017c-e349-e1a4-00000756b0f0 
 on database directory memory:/Users/nabihabashir/Desktop/JPA-project1/project1 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5c29bfd 
 Loaded from file:/Users/nabihabashir/Library/Application%20Support/JetBrains/IntelliJIdea2021.2/jdbc-drivers/Apache%20Derby/10.15.2.0/derby-10.15.2.0.jar
+=======
+Wed Nov 03 00:54:51 UTC 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-017c-e34a-a23a-00000757ba98 
+on database directory memory:/home/raymond/Desktop/JPA-project1/project1 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5c29bfd 
+Loaded from file:/home/raymond/.config/JetBrains/IntelliJIdea2021.2/jdbc-drivers/Apache%20Derby/10.15.2.0/derby-10.15.2.0.jar
+>>>>>>> Stashed changes
 java.vendor=JetBrains s.r.o.
 java.runtime.version=11.0.12+7-b1504.28
 user.dir=/Users/nabihabashir/Desktop/JPA-project1/project1

@@ -5,8 +5,6 @@ import model.Authoring_Entities;
 import model.Books;
 import model.Publishers;
 
-import model.*;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -17,17 +15,17 @@ import java.util.logging.Logger;
 // rayRay
 // nabiha
 // rami
-public class Main {
+public class BooksDB {
     /** Entity manager that will be used to interact with the database */
     private EntityManager em;
     /** Logger that will be used throughout the program*/
-    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(BooksDB.class.getName());
 
     /**
      * Constructor
      * @param em entity manager object
      */
-    public Main(EntityManager em){
+    public BooksDB(EntityManager em){
         this.em = em;
     }
 
@@ -35,7 +33,7 @@ public class Main {
      * Method that displays the main interactions the user can have with the
      * application.
      */
-    public static void displayMainMenu(){
+    public void displayMainMenu(){
         Books b = new Books();
         System.out.println( "\n-----Main Menu-----\nPlease select an option.\n" );
         System.out.println( "1. Books" );
@@ -74,7 +72,10 @@ public class Main {
      * Method that displays the interactions that user
      * can have with the Book entity
      */
-    public static void booksMenu(){
+    public void booksMenu(){
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Main");
+        EntityManager em  = emf.createEntityManager();
+        BooksDB m = new BooksDB(em);
         System.out.println( "\n-----Books Menu-----\nPlease select an option.\n" );
         System.out.println( "1. Display all Books" );
         System.out.println( "2. Add a Book" );
@@ -91,7 +92,7 @@ public class Main {
 
         do{
             if (userChoice == 1){
-                //TODO: displayBooks();
+                // TODO : displaybooks()
                 booksMenu();
                 repeatMenu = false;
             }
@@ -233,7 +234,7 @@ public class Main {
             repeatMenu = false;
         }
         if (userChoice == 4){
-            displayMainMenu();
+//            displayMainMenu();
             repeatMenu = false;
         }
         if (userChoice == 5){
@@ -289,9 +290,11 @@ public class Main {
 
 
     public static void main(String[] args) {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("BookRecords");
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("BooksDB");
         EntityManager manager = factory.createEntityManager();
-        displayMainMenu();
+
+        BooksDB db = new BooksDB(manager);
+        db.displayBooks();
     }
 
 
