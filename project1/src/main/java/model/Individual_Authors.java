@@ -13,7 +13,7 @@ public class Individual_Authors extends Authoring_Entities{
     /**
      * List of teams the author is part of
      */
-    @ManyToMany(mappedBy = "Individual_Authors",
+    @ManyToMany(mappedBy = "",
             cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Ad_Hoc_Teams> ad_hoc_teamsList;
 
