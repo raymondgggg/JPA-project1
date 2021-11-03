@@ -8,6 +8,8 @@ import model.Publishers;
 import model.*;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.*;
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -59,7 +61,7 @@ public class Main {
                 authoringEntitiesMenu();
             }
             else if (userChoice == 4){
-                // TODO make the list primary keys method
+                // TODO: displayPrimaryKeys();
             }
             else if (userChoice == 5){
                 repeatMenu = false;
@@ -89,7 +91,7 @@ public class Main {
 
         do{
             if (userChoice == 1){
-                //TODO: displayBooks()
+                //TODO: displayBooks();
                 booksMenu();
                 repeatMenu = false;
             }
@@ -128,8 +130,22 @@ public class Main {
         while(repeatMenu);
     }
 
+    /**
+     * Method to display all the books in the relational database
+     */
     public void displayBooks(){
+        List<Books> books = em.createNamedQuery("displayAllBooks", Books.class).getResultList();
+        System.out.println("List of all books");
+        System.out.println("ISBN    TITLE     YEAR PUBLISHED      AUTHORING ENTITY    PUBLISHER");
 
+        if(!books.isEmpty()) {
+            for (Books book : books) {
+                System.out.println(book);
+            }
+        }
+        else{
+            System.out.println("No record of books exist.");
+        }
     }
 
 
@@ -273,6 +289,8 @@ public class Main {
 
 
     public static void main(String[] args) {
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("BookRecords");
+        EntityManager manager = factory.createEntityManager();
         displayMainMenu();
     }
 
